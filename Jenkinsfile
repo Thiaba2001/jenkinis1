@@ -7,7 +7,7 @@ pipeline {
     stages{
         stage{
             steps{
-                echo build!
+                echo 'build!'
             }
         }
     }
