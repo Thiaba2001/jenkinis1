@@ -8,7 +8,7 @@ pipeline {
         }
         stage('deployment production'){
             when{
-                branch 'prod'
+                branch 'test'
             }
             steps{
                 echo 'deploy !'
