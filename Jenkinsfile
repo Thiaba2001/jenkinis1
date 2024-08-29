@@ -1,28 +1,14 @@
-pipeline{
-    agent {
-        docker{
-            image 'node:21-alpine'
-
-        }
+pipeline {
+    agent any
+    triggers{
+        cron('* * * * *')
     }
-
 
     stages{
-        stage('build'){
+        stage{
             steps{
-                sh 'npm -v'
-               
+                echo build!
             }
-        }
-         
-    }
-
-    post {
-        always {
-            echo 'always !'
-        }
-        success{
-            echo 'success !'
         }
     }
 }
