@@ -21,7 +21,7 @@ pipeline {
                     }
                     stage('test'){
                         steps{
-                            echo "test pour ${PLATEFORME} .${BROWSER}"                      
+                            echo "test pour ${PLATEFORM} . ${BROWSER}"                      
                          }
                     }
                 }
