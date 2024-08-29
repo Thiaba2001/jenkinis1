@@ -1,17 +1,25 @@
 pipeline {
     agent any 
     stages {
-        stage('build'){
+        stage('buid'){
+            failFast true
+            parallel{
+                stage('build frotent'){
             steps{
                 echo 'build!'
             }
         }
-        stage('deployment production'){
-            when{
-                branch 'test'
-            }
+        stage('build backend'){
             steps{
-                echo 'deploy !'
+                echo 'build backend!'
+            }
+        }
+
+            }
+        }
+        stage('buid production'){
+            steps{
+                echo 'buikd production'
             }
         }
     }
