@@ -18,7 +18,8 @@ pipeline {
                     string(name: 'VERSION',defaultValue: 'latest',description: 'une version')
 
                 }
-                steps{
+            }
+                steps {
                     echo "user: ${USER_SUBMIT}"
                     echo "version: ${VERSION}"
                     echo 'deploy!'
@@ -27,4 +28,3 @@ pipeline {
             }
         }
     }
-}
