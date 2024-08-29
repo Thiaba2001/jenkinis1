@@ -13,7 +13,7 @@ pipeline {
                 message 'voulez-vous déployer en production ?'
                 ok 'déployer !'
                 submitter 'admin,devops'
-                submitParameter 'USER_SUBMIT'
+                submitterParameter 'USER_SUBMIT'
                 parameters{
                     string(name: 'VERSION',defaultValue: 'latest',description: 'une version')
 
