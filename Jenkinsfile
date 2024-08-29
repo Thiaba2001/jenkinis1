@@ -6,11 +6,11 @@ pipeline {
                 axes {
                     axis{
                         name 'PLATEFORM'
-                        value 'linus','macos','windows'
+                        values 'linus','macos','windows'
                     }
                     axis{
                         name 'BROWSER'
-                        value 'firefox','chrome','safari'
+                        values 'firefox','chrome','safari'
                     }
                 }
                 stages{
