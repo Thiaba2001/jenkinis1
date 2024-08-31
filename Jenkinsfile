@@ -1,16 +1,19 @@
 pipeline {
     agent any 
-    tools {
-        gradle 'gradle8.10'
-    }
 
-    stages {
+    stages{
         stage('build'){
             steps{
-                sh 'gradle -v'
+                echo 'hello'
+               
             }
         }
-        
-}
+
+    post{
+        success{
+             emailext( to:'thiabadione@esp.sn' ,  body:'test body', subjec:'test subject')
+        }
+    }
+    }
 
 }
