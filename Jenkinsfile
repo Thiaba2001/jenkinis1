@@ -11,7 +11,7 @@ pipeline {
     }
     post{
         success{
-             emailext( to:'thiabadione@esp.sn' ,  body:'test body', subjec:'test subject')
+             emailext( to:'thiabadione@esp.sn' ,  body:'test body', subject:'test subject')
         }
     }
 
